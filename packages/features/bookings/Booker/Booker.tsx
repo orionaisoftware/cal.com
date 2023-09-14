@@ -1,4 +1,4 @@
-import { LazyMotion, m, AnimatePresence } from "framer-motion";
+import { LazyMotion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import StickyBox from "react-sticky-box";
@@ -332,16 +332,6 @@ const BookerComponent = ({
             </BookerSection>
           </AnimatePresence>
         </div>
-
-        <m.span
-          key="logo"
-          className={classNames(
-            "-z-10 mb-6 mt-auto pt-6 [&_img]:h-[15px]",
-            hasDarkBackground ? "dark" : "",
-            layout === BookerLayouts.MONTH_VIEW ? "block" : "hidden"
-          )}>
-          {!hideBranding ? <PoweredBy logoOnly /> : null}
-        </m.span>
       </div>
 
       <BookFormAsModal
